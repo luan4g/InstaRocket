@@ -1,11 +1,13 @@
-import express from 'express';
+import AppController from "./app";
 
-const app = express();
+const server = AppController();
 
-app.use(express.json());
+try {
+  server.middlewares();
+  server.router();
+} catch (error) {
+  console.log("> [Server] Error");
+  console.log(error);
+}
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-})
-
-app.listen(3333);
+server.app.listen(3333, () => console.log("> [Server] Started"));

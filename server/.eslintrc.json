@@ -19,7 +19,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-      "space-before-function-paren": ["error", "never"],
+      "no-unused-vars": "off",
+      "space-before-function-paren": "off",
       "comma-dangle": "off",
       "semi": "off",
       "quotes": "off"

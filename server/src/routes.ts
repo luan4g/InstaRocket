@@ -4,7 +4,7 @@ function RouterController() {
   const routes = express.Router();
 
   routes.get("/", (req, res) => {
-    res.send("hello planet");
+    res.json({ message: "Hello planet" });
   });
 
   return {
